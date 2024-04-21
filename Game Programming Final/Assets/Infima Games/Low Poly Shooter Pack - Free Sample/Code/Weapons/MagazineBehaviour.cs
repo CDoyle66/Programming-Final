@@ -12,7 +12,7 @@ namespace InfimaGames.LowPolyShooterPack
         #region GETTERS
         
         /// <summary>
-        /// Returns The Total Ammunition.
+        /// Returns The Total Ammunition. Maximum capacity of magazine.
         /// </summary>
         public abstract int GetAmmunitionTotal();
         /// <summary>

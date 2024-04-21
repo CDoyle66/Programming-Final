@@ -28,7 +28,7 @@ namespace InfimaGames.LowPolyShooterPack
         #region GETTERS
 
         /// <summary>
-        /// Ammunition Total.
+        /// Ammunition Total. Maximum capacity of magazine
         /// </summary>
         public override int GetAmmunitionTotal() => ammunitionTotal;
         /// <summary>

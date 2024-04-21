@@ -97,12 +97,17 @@ namespace InfimaGames.LowPolyShooterPack
         private WeaponAttachmentManagerBehaviour attachmentManager;
 
         /// <summary>
-        /// Amount of ammunition left.
+        /// Amount of ammunition left in the current magazine
         /// </summary>
         private int ammunitionCurrent;
 
+        /// <summary>
+        /// Amount of ammunition left in reserve
+        /// </summary>
+        public int ammunitionReserve;
+
         #region Attachment Behaviours
-        
+
         /// <summary>
         /// Equipped Magazine Reference.
         /// </summary>
@@ -159,6 +164,9 @@ namespace InfimaGames.LowPolyShooterPack
 
             //Max Out Ammo.
             ammunitionCurrent = magazineBehaviour.GetAmmunitionTotal();
+
+            //give player two extra magazines in reserve
+            ammunitionReserve = 2*magazineBehaviour.GetAmmunitionTotal();
         }
 
         #endregion
@@ -182,6 +190,8 @@ namespace InfimaGames.LowPolyShooterPack
         public override int GetAmmunitionCurrent() => ammunitionCurrent;
 
         public override int GetAmmunitionTotal() => magazineBehaviour.GetAmmunitionTotal();
+
+        public override int GetAmmunitionReserve() => ammunitionReserve;
 
         public override bool IsAutomatic() => automatic;
         public override float GetRateOfFire() => roundsPerMinutes;
@@ -249,6 +259,11 @@ namespace InfimaGames.LowPolyShooterPack
             //Spawn casing prefab at spawn point.
             if(prefabCasing != null && socketEjection != null)
                 Instantiate(prefabCasing, socketEjection.position, socketEjection.rotation);
+        }
+
+        public void AddReserveAmmunition()
+        {
+            ammunitionReserve += magazineBehaviour.GetAmmunitionTotal();
         }
 
         #endregion
