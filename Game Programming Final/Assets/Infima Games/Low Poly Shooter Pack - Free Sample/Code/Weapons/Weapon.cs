@@ -199,6 +199,8 @@ namespace InfimaGames.LowPolyShooterPack
         public override bool IsFull() => ammunitionCurrent == magazineBehaviour.GetAmmunitionTotal();
         public override bool HasAmmunition() => ammunitionCurrent > 0;
 
+        public override bool HasAmmunitionReserve() => ammunitionReserve > 0;
+
         public override RuntimeAnimatorController GetAnimatorController() => controller;
         public override WeaponAttachmentManagerBehaviour GetAttachmentManager() => attachmentManager;
 
@@ -249,6 +251,9 @@ namespace InfimaGames.LowPolyShooterPack
 
         public override void FillAmmunition(int amount)
         {
+            //remove ammo used from reserve
+            ammunitionReserve -= (magazineBehaviour.GetAmmunitionTotal() - ammunitionCurrent);
+            print(ammunitionReserve);
             //Update the value by a certain amount.
             ammunitionCurrent = amount != 0 ? Mathf.Clamp(ammunitionCurrent + amount, 
                 0, GetAmmunitionTotal()) : magazineBehaviour.GetAmmunitionTotal();

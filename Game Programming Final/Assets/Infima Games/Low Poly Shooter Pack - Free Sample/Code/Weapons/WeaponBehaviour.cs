@@ -90,9 +90,13 @@ namespace InfimaGames.LowPolyShooterPack
         /// </summary>
         public abstract bool IsAutomatic();
         /// <summary>
-        /// Returns true if the weapon has any ammunition left.
+        /// Returns true if the weapon has any ammunition left in the magazine.
         /// </summary>
         public abstract bool HasAmmunition();
+        /// <summary>
+        /// Returns true if the weapon has any ammunition left in reserve.
+        /// </summary>
+        public abstract bool HasAmmunitionReserve();
 
         /// <summary>
         /// Returns true if the weapon is full of ammunition.
