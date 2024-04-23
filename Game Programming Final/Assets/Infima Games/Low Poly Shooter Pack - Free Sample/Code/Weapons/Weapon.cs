@@ -1,5 +1,6 @@
 ﻿// Copyright 2021, Infima Games. All Rights Reserved.
 
+using System;
 using UnityEngine;
 
 namespace InfimaGames.LowPolyShooterPack
@@ -251,12 +252,35 @@ namespace InfimaGames.LowPolyShooterPack
 
         public override void FillAmmunition(int amount)
         {
-            //remove ammo used from reserve
-            ammunitionReserve -= (magazineBehaviour.GetAmmunitionTotal() - ammunitionCurrent);
+            
             print(ammunitionReserve);
             //Update the value by a certain amount.
-            ammunitionCurrent = amount != 0 ? Mathf.Clamp(ammunitionCurrent + amount, 
-                0, GetAmmunitionTotal()) : magazineBehaviour.GetAmmunitionTotal();
+
+            //if (ammunitionReserve >= magazineBehaviour.GetAmmunitionTotal()) //If there is enough ammo in reserve for a full mag reload
+            //{
+            //    ammunitionCurrent = magazineBehaviour.GetAmmunitionTotal();
+            //}
+            //else
+            //{
+            //    ammunitionCurrent = amount + ammunitionReserve; //partial reload
+            //}
+
+            int diff = magazineBehaviour.GetAmmunitionTotal() - ammunitionCurrent;
+            if(ammunitionReserve >= diff)
+            {
+                ammunitionCurrent += diff;
+                ammunitionReserve -= diff;
+            }
+            else
+            {
+                ammunitionCurrent += ammunitionReserve;
+                ammunitionReserve = 0;
+            }
+                //*/
+            //ammunitionCurrent = amount != 0 ? Mathf.Clamp(ammunitionCurrent + amount, //the clamp is the # of bullets in the mag at time of reload
+            //0, GetAmmunitionTotal()) : magazineBehaviour.GetAmmunitionTotal();
+            //remove ammo used from reserve
+            //ammunitionReserve -= (magazineBehaviour.GetAmmunitionTotal() - ammunitionCurrent);
         }
 
         public override void EjectCasing()

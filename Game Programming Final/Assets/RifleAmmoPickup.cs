@@ -6,7 +6,8 @@ using UnityEngine;
 public class RifleAmmoPickup : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject rifle;
+
+    public bool isRifleAmmo;
     void Start()
     {
 
@@ -21,11 +22,19 @@ public class RifleAmmoPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            rifle.GetComponent<Weapon>().AddReserveAmmunition();
+            Weapon[] weapons = other.gameObject.GetComponentsInChildren<Weapon>();
+            foreach(Weapon weapon in weapons)
+            {
+                if(weapon.IsAutomatic() && isRifleAmmo)
+                {
+                    weapon.AddReserveAmmunition();
+                }
+                else if (!weapon.IsAutomatic() && !isRifleAmmo)
+                {
+                    weapon.AddReserveAmmunition();
+                }
+            }
+            Destroy(this.gameObject);
         }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        Destroy(this.gameObject);
     }
 }

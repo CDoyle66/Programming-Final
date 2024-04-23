@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 96448838451407516}
   - component: {fileID: 114243545424532484}
   m_Layer: 15
-  m_Name: P_LPSP_PROJ_Bullet_01
-  m_TagString: Rifle bullet
+  m_Name: Pistol Bullet
+  m_TagString: Pistol bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
