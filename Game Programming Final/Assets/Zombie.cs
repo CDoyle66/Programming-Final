@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,22 +8,30 @@ public class Zombie : MonoBehaviour
 {
     private NavMeshAgent agent;
     public Transform player;
-    public int maxHealth;
+    private Animator animator;
     public int health;
+    private Collider[] colliders;
 
     public int rifleDamage;
     public int pistolDamage;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        
+    }
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
         StartCoroutine(UpdateTarget());
+        player = GameObject.FindWithTag("Character").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("Speed", agent.speed);
     }
 
     private IEnumerator UpdateTarget()
@@ -44,6 +53,9 @@ public class Zombie : MonoBehaviour
         {
             //enemy dies
             Debug.Log("enemy dies");
+            animator.SetTrigger("Death");
+            agent.enabled = false;
+            StartCoroutine(DeathFade());
         }
     }
     public void TakePistolDamage()
@@ -57,6 +69,21 @@ public class Zombie : MonoBehaviour
         {
             //enemy dies
             Debug.Log("enemy dies");
+            animator.SetTrigger("Death"); //death anim trigger
+            agent.enabled = false; //stop movement
+            StartCoroutine(DeathFade()); //start death fade
         }
+    }
+
+    private IEnumerator DeathFade()
+    {
+        colliders = GetComponentsInChildren<Collider>();
+        foreach (Collider collider in colliders)
+        {
+            collider.enabled = false;
+        }
+        gameObject.layer = 7; //stop collisions
+        yield return new WaitForSeconds(5.0f);
+        Destroy(this.gameObject);
     }
 }
