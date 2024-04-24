@@ -149,6 +149,8 @@ namespace InfimaGames.LowPolyShooterPack
 		/// </summary>
 		private bool cursorLocked;
 
+		public int health;
+
 		#endregion
 
 		#region CONSTANTS
@@ -556,14 +558,15 @@ namespace InfimaGames.LowPolyShooterPack
 			return true;
 		}
 
-		#endregion
 
-		#region INPUT
+        #endregion
 
-		/// <summary>
-		/// Fire.
-		/// </summary>
-		public void OnTryFire(InputAction.CallbackContext context)
+        #region INPUT
+
+        /// <summary>
+        /// Fire.
+        /// </summary>
+        public void OnTryFire(InputAction.CallbackContext context)
 		{
 			//Block while the cursor is unlocked.
 			if (!cursorLocked)

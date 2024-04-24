@@ -16,16 +16,12 @@ public class Zombie : MonoBehaviour
     public int pistolDamage;
 
     // Start is called before the first frame update
-    private void Awake()
-    {
-        
-    }
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         StartCoroutine(UpdateTarget());
-        player = GameObject.FindWithTag("Character").transform;
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -73,6 +69,17 @@ public class Zombie : MonoBehaviour
             agent.enabled = false; //stop movement
             StartCoroutine(DeathFade()); //start death fade
         }
+    }
+
+    public void Attack()
+    {
+        agent.speed = 0.2f;
+        animator.SetTrigger("Attack");
+    }
+
+    public void ResetArm()
+    {
+        agent.speed = 1.5f;
     }
 
     private IEnumerator DeathFade()
