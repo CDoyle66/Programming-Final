@@ -2294,7 +2294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   health: 100
-  rifleDamage: 10
+  rifleDamage: 20
   pistolDamage: 35
 --- !u!195 &7974085741904492637
 NavMeshAgent:
