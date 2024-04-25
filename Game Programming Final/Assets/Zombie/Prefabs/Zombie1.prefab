@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &597747401868489967
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3312264254057291506}
   - component: {fileID: 2190143634637461993}
+  - component: {fileID: 2747233908757880410}
   m_Layer: 0
   m_Name: Base HumanLLegCalf
   m_TagString: Zombie
@@ -317,6 +319,20 @@ CapsuleCollider:
   m_Height: 0.69
   m_Direction: 0
   m_Center: {x: -0.24, y: 0, z: 0}
+--- !u!114 &2747233908757880410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718708696564122599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &803799316254784344
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3989546061244958339}
   - component: {fileID: 4462449342558120420}
+  - component: {fileID: 5118533848096066625}
   m_Layer: 0
   m_Name: Base HumanLArmForearm
   m_TagString: Zombie
@@ -564,6 +581,20 @@ CapsuleCollider:
   m_Height: 0.43
   m_Direction: 0
   m_Center: {x: -0.19, y: 0, z: 0}
+--- !u!114 &5118533848096066625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477319741389668175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &1487836275490637241
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6195574577297854756}
   - component: {fileID: 4909711938136091081}
+  - component: {fileID: 2425899861837535446}
   m_Layer: 0
   m_Name: Base HumanRThigh
   m_TagString: Zombie
@@ -687,6 +719,20 @@ CapsuleCollider:
   m_Height: 0.69
   m_Direction: 0
   m_Center: {x: -0.18, y: 0, z: 0}
+--- !u!114 &2425899861837535446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548363270174808903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &1696191642689899214
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6697741321985201734}
   - component: {fileID: 1607485003482383197}
+  - component: {fileID: 1530833376661965313}
   m_Layer: 0
   m_Name: Base HumanLLegThigh
   m_TagString: Zombie
@@ -743,6 +790,20 @@ CapsuleCollider:
   m_Height: 0.69
   m_Direction: 0
   m_Center: {x: -0.18, y: 0, z: 0}
+--- !u!114 &1530833376661965313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696191642689899214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &1759131370823550344
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +844,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3095270377931777224}
-  - component: {fileID: 7363650612166565182}
   m_Layer: 0
   m_Name: Base HumanPelvis
   m_TagString: Zombie
@@ -809,19 +869,6 @@ Transform:
   - {fileID: 5436720006541381587}
   m_Father: {fileID: 578376449398627443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7363650612166565182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1836615893786013965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombie: {fileID: 4493914613880827488}
 --- !u!1 &1840469243636615951
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8195457672599474506}
   - component: {fileID: 7824731316054668281}
+  - component: {fileID: 3160619960231665022}
   m_Layer: 0
   m_Name: Base HumanHead
   m_TagString: Zombie
@@ -882,6 +930,20 @@ CapsuleCollider:
   m_Height: 0.36
   m_Direction: 0
   m_Center: {x: 0, y: 0.03, z: 0}
+--- !u!114 &3160619960231665022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840469243636615951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 1
 --- !u!1 &1918587762329072105
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +1047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &1934761135041797723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &2072252127773363846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,6 +1318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &2643020092499374607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3660009025035086490}
   - component: {fileID: 561998429365627676}
+  - component: {fileID: 8775797744941851154}
   m_Layer: 0
   m_Name: Base HumanLArmPalm
   m_TagString: Zombie
@@ -1343,6 +1409,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.05
   m_Center: {x: -0.1, y: 0, z: 0.01}
+--- !u!114 &8775797744941851154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656270106885244056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &2896174114429895207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,6 +1496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2191792333964118316}
   - component: {fileID: 604302667883640803}
+  - component: {fileID: 472729623134096481}
   m_Layer: 0
   m_Name: Base HumanRArmUpperarm
   m_TagString: Zombie
@@ -1462,6 +1543,20 @@ CapsuleCollider:
   m_Height: 0.43
   m_Direction: 0
   m_Center: {x: -0.14, y: 0.01, z: 0}
+--- !u!114 &472729623134096481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3117839698667779262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &3222155017104201269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,6 +1599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608017155184299671}
   - component: {fileID: 7042206653941544251}
+  - component: {fileID: 2499736684506828229}
   m_Layer: 0
   m_Name: Base HumanRArmForearm
   m_TagString: Zombie
@@ -1550,6 +1646,20 @@ CapsuleCollider:
   m_Height: 0.43
   m_Direction: 0
   m_Center: {x: -0.19, y: 0, z: 0}
+--- !u!114 &2499736684506828229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355302367417304662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &3450443001331210565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,6 +1801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &3847861894653174833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,6 +1905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &3870191209392604518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,6 +2039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &4136835790407018562
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &4493914613880827488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,6 +2421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &4736925457867559595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,6 +2590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2666804134560604886}
   - component: {fileID: 2684741025911789656}
+  - component: {fileID: 7910147086035237943}
   m_Layer: 0
   m_Name: Base HumanRCalf
   m_TagString: Zombie
@@ -2521,6 +2637,20 @@ CapsuleCollider:
   m_Height: 0.69
   m_Direction: 0
   m_Center: {x: -0.24, y: 0, z: 0}
+--- !u!114 &7910147086035237943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542661683521872327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &5596428681940554170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,6 +2723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7849909225841866114}
   - component: {fileID: 4121290310981193074}
+  - component: {fileID: 5532502756253153103}
   m_Layer: 0
   m_Name: Base HumanRArmPalm
   m_TagString: Zombie
@@ -2641,6 +2772,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.05
   m_Center: {x: -0.1, y: 0, z: 0.01}
+--- !u!114 &5532502756253153103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5931361788683727348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &6144250464998781669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +2921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &6718398341978313001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +3028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4714040075424425994}
   - component: {fileID: 7921023899701895680}
+  - component: {fileID: 1902579134783474037}
   m_Layer: 0
   m_Name: Base HumanLArmUpperarm
   m_TagString: Zombie
@@ -2928,6 +3075,20 @@ CapsuleCollider:
   m_Height: 0.43
   m_Direction: 0
   m_Center: {x: -0.14, y: 0.01, z: 0}
+--- !u!114 &1902579134783474037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7532005085892297706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &7535322510217153111
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,6 +3257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!64 &7803294930296808874
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3264,6 +3426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &8103067124237306251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3379,6 +3542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &8121686736740376697
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,6 +3651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &8247726537763585979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,7 +3756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6303288132320331893}
   - component: {fileID: 2171855118348170539}
-  - component: {fileID: 824612005944906598}
+  - component: {fileID: 1514859708737848602}
   m_Layer: 0
   m_Name: Base HumanRibcage
   m_TagString: Zombie
@@ -3641,27 +3806,20 @@ CapsuleCollider:
   m_Height: 0.66
   m_Direction: 0
   m_Center: {x: 0.26, y: 0.03, z: 0}
---- !u!65 &824612005944906598
-BoxCollider:
+--- !u!114 &1514859708737848602
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8588089365250138959}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.483042, y: 0.2385236, z: 0.28000867}
-  m_Center: {x: 0.258479, y: 0.025573064, z: 0.01575621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45fb78929fc2d4190d3d298bbc7d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 4493914613880827488}
+  isHead: 0
 --- !u!1 &8693589203349441919
 GameObject:
   m_ObjectHideFlags: 0

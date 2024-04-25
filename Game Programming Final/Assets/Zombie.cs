@@ -54,11 +54,44 @@ public class Zombie : MonoBehaviour
             StartCoroutine(DeathFade());
         }
     }
+    public void TakeRifleHeadshotDamage()
+    {
+        if (health > rifleDamage*2)
+        { // if the enemy has more health than the bullet does damage
+            health -= rifleDamage*2; //take health damage
+            Debug.Log(health);
+        }
+        else
+        {
+            //enemy dies
+            Debug.Log("enemy dies");
+            animator.SetTrigger("Death");
+            agent.enabled = false;
+            StartCoroutine(DeathFade());
+        }
+    }
+
     public void TakePistolDamage()
     {
         if (health > pistolDamage)
         { // if the enemy has more health than the bullet does damage
             health -= pistolDamage; //take health damage
+            Debug.Log(health);
+        }
+        else
+        {
+            //enemy dies
+            Debug.Log("enemy dies");
+            animator.SetTrigger("Death"); //death anim trigger
+            agent.enabled = false; //stop movement
+            StartCoroutine(DeathFade()); //start death fade
+        }
+    }
+    public void TakePistolHeadshotDamage()
+    {
+        if (health > pistolDamage*2)
+        { // if the enemy has more health than the bullet does damage
+            health -= pistolDamage*2; //take health damage
             Debug.Log(health);
         }
         else

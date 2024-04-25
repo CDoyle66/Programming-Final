@@ -6,6 +6,7 @@ public class ZombiePart : MonoBehaviour
 {
     private Mesh mesh;
     public GameObject zombie;
+    public bool isHead;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +22,29 @@ public class ZombiePart : MonoBehaviour
     {
         if (collision.gameObject.tag == "Rifle bullet")
         {
-            zombie.GetComponent<Zombie>().TakeRifleDamage();
-            Destroy(collision.gameObject); //destroy bullet upon contact
+            if (isHead)
+            {
+                zombie.GetComponent<Zombie>().TakeRifleHeadshotDamage();
+                Destroy(collision.gameObject); //destroy bullet upon contact
+            }
+            else
+            {
+                zombie.GetComponent<Zombie>().TakeRifleDamage();
+                Destroy(collision.gameObject); //destroy bullet upon contact
+            }
         }
         else if (collision.gameObject.tag == "Pistol bullet")
         {
-            zombie.GetComponent<Zombie>().TakePistolDamage();
-            Destroy(collision.gameObject); //destroy bullet upon contact
+            if (isHead)
+            {
+                zombie.GetComponent<Zombie>().TakePistolHeadshotDamage();
+                Destroy(collision.gameObject); //destroy bullet upon contact
+            }
+            else
+            {
+                zombie.GetComponent<Zombie>().TakePistolDamage();
+                Destroy(collision.gameObject); //destroy bullet upon contact
+            }
         }
     }
 }

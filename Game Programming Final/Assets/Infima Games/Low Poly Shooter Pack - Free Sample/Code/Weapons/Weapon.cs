@@ -253,7 +253,6 @@ namespace InfimaGames.LowPolyShooterPack
         public override void FillAmmunition(int amount)
         {
             
-            print(ammunitionReserve);
             //Update the value by a certain amount.
 
             //if (ammunitionReserve >= magazineBehaviour.GetAmmunitionTotal()) //If there is enough ammo in reserve for a full mag reload
@@ -292,7 +291,7 @@ namespace InfimaGames.LowPolyShooterPack
 
         public void AddReserveAmmunition()
         {
-            ammunitionReserve += magazineBehaviour.GetAmmunitionTotal();
+            ammunitionReserve += 2*magazineBehaviour.GetAmmunitionTotal();
         }
 
         #endregion
