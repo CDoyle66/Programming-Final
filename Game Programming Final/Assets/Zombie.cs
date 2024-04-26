@@ -107,6 +107,7 @@ public class Zombie : MonoBehaviour
         //enemy dies
         Debug.Log("enemy dies");
         RoundManager.S.zombiesKilled++; //increase player killcount
+        RoundManager.S.UpdateZombieList();
 
         animator.SetTrigger("Death"); //death anim trigger
         agent.enabled = false; //stop movement

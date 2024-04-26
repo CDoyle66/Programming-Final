@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.InputSystem;
+using TMPro;
 
 namespace InfimaGames.LowPolyShooterPack
 {
@@ -149,7 +150,12 @@ namespace InfimaGames.LowPolyShooterPack
 		/// </summary>
 		private bool cursorLocked;
 
+		//Health Counter
 		public int health;
+
+		//Health UI
+		public GameObject healthUI;
+		private GameObject zombieUI;
 
 		#endregion
 
@@ -197,9 +203,13 @@ namespace InfimaGames.LowPolyShooterPack
 			layerActions = characterAnimator.GetLayerIndex("Layer Actions");
 			//Cache a reference to the overlay layer's index.
 			layerOverlay = characterAnimator.GetLayerIndex("Layer Overlay");
-		}
 
-		protected override void Update()
+			//access UI elements
+			healthUI = GameObject.Find("Health num");
+
+        }
+
+        protected override void Update()
 		{
 			//Match Aim.
 			aiming = holdingButtonAim && CanAim();
@@ -412,13 +422,27 @@ namespace InfimaGames.LowPolyShooterPack
 			const string boolName = "Holstered";
 			characterAnimator.SetBool(boolName, holstered);	
 		}
-		
-		#region ACTION CHECKS
 
-		/// <summary>
-		/// Can Fire.
-		/// </summary>
-		private bool CanPlayAnimationFire()
+		public void UpdateHealth()
+		{
+			if (health > 0) //if you have more than zero health left
+			{
+                healthUI.GetComponent<Health>().health = health;
+                healthUI.GetComponent<Health>().HealthLoss();
+            }
+			else
+			{
+				//death
+			}
+			
+        }
+
+        #region ACTION CHECKS
+
+        /// <summary>
+        /// Can Fire.
+        /// </summary>
+        private bool CanPlayAnimationFire()
 		{
 			//Block.
 			if (holstered || holstering)
