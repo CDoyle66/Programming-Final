@@ -7,12 +7,12 @@ public class attacker : MonoBehaviour
 {
     public int attackDamage;
 
-    public AudioSource audioSource; //audio source of the zombie
+    public AudioSource audioSource; //
     public AudioClip damage; //sound of zombie hitting player
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

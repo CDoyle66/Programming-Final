@@ -8,9 +8,13 @@ public class RifleAmmoPickup : MonoBehaviour
     // Start is called before the first frame update
 
     public bool isRifleAmmo;
+    private MeshRenderer renderer;
+    private BoxCollider collider;
+
     void Start()
     {
-
+        renderer = GetComponent<MeshRenderer>();
+        collider = GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -34,7 +38,18 @@ public class RifleAmmoPickup : MonoBehaviour
                     weapon.AddReserveAmmunition();
                 }
             }
-            Destroy(this.gameObject);
+            StartCoroutine(Respawn());
         }
+    }
+
+    public IEnumerator Respawn() //Respawn ammo after set amount of seconds
+    {
+        //make pickup disappear
+        renderer.enabled = false; 
+        collider.enabled = false;
+        yield return new WaitForSeconds(40.0f);
+        //make pickup reappear
+        renderer.enabled = true;
+        collider.enabled = true;
     }
 }

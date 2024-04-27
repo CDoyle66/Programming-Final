@@ -155,7 +155,6 @@ namespace InfimaGames.LowPolyShooterPack
 		//Health 
 		public int health;
 		public GameObject healthUI;
-		public AudioClip damage; //sound of getting hit by zombie
 
 
 		#endregion
@@ -429,7 +428,6 @@ namespace InfimaGames.LowPolyShooterPack
 
 		public void UpdateHealth()
 		{
-			source.PlayOneShot(damage); //play sound of getting hit
 			if (health > 0) //if you have more than zero health left
 			{
                 healthUI.GetComponent<Health>().health = health; //Update UI to reflect loss of health

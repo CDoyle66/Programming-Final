@@ -12,6 +12,7 @@ public class Zombie : MonoBehaviour
     private Collider[] colliders;
 
     private AudioSource audioSource;
+    public AudioClip footsteps;
 
     public int health; //Health of the zombie
 
@@ -32,13 +33,13 @@ public class Zombie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("Speed", agent.speed);
+        animator.SetFloat("Speed", agent.speed); //Update the animator to tell it how fast the zombie is moving
     }
 
     private IEnumerator UpdateTarget()
     {
-        while (true)
-        {
+        while (true) {
+            audioSource.PlayOneShot(footsteps);
             agent.destination = player.position;
             yield return new WaitForSeconds(1.0f);
         }
