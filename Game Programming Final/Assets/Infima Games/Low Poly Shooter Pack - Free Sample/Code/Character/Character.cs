@@ -45,6 +45,8 @@ namespace InfimaGames.LowPolyShooterPack
 		[SerializeField]
 		private Animator characterAnimator;
 
+		private AudioSource source;
+
 		#endregion
 
 		#region FIELDS
@@ -150,12 +152,11 @@ namespace InfimaGames.LowPolyShooterPack
 		/// </summary>
 		private bool cursorLocked;
 
-		//Health Counter
+		//Health 
 		public int health;
-
-		//Health UI
 		public GameObject healthUI;
-		private GameObject zombieUI;
+		public AudioClip damage; //sound of getting hit by zombie
+
 
 		#endregion
 
@@ -206,6 +207,9 @@ namespace InfimaGames.LowPolyShooterPack
 
 			//access UI elements
 			healthUI = GameObject.Find("Health num");
+
+			//set up audio 
+			source = GetComponent<AudioSource>();
 
         }
 
@@ -425,14 +429,17 @@ namespace InfimaGames.LowPolyShooterPack
 
 		public void UpdateHealth()
 		{
+			source.PlayOneShot(damage); //play sound of getting hit
 			if (health > 0) //if you have more than zero health left
 			{
-                healthUI.GetComponent<Health>().health = health;
+                healthUI.GetComponent<Health>().health = health; //Update UI to reflect loss of health
                 healthUI.GetComponent<Health>().HealthLoss();
             }
 			else
 			{
-				//death
+                healthUI.GetComponent<Health>().health = health; //Update UI to reflect loss of health
+                healthUI.GetComponent<Health>().HealthLoss();
+                RoundManager.S.PlayerDeath(); //player dies 
 			}
 			
         }

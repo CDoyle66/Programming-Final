@@ -6,6 +6,9 @@ using UnityEngine;
 public class attacker : MonoBehaviour
 {
     public int attackDamage;
+
+    public AudioSource audioSource; //audio source of the zombie
+    public AudioClip damage; //sound of zombie hitting player
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +24,8 @@ public class attacker : MonoBehaviour
     {
         if (other.gameObject.tag == "Player") 
         {
+            audioSource.PlayOneShot(damage);
             other.gameObject.GetComponent<Character>().health -= attackDamage;
-            Debug.Log("take damage");
             other.gameObject.GetComponent<Character>().UpdateHealth(); //update player health
         }
     }

@@ -9,15 +9,20 @@ public class Zombie : MonoBehaviour
     private NavMeshAgent agent;
     public Transform player;
     private Animator animator;
-    public int health;
     private Collider[] colliders;
 
-    public int rifleDamage;
+    private AudioSource audioSource;
+
+    public int health; //Health of the zombie
+
+    //Damage done to the zombie by weapons
+    public int rifleDamage; 
     public int pistolDamage;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player").transform;
@@ -91,15 +96,15 @@ public class Zombie : MonoBehaviour
 
 
 
-    public void Attack()
+    public void Attack() //Zombie attacks the player
     {
-        agent.speed = 0.2f;
+        agent.speed = 0.2f; //Make the zombie move slower during its attack anim
         animator.SetTrigger("Attack");
     }
 
-    public void ResetArm()
+    public void ResetArm() 
     {
-        agent.speed = 1.5f;
+        agent.speed = 1.5f; //Return zombie to normal movement speed after attacking
     }
 
     private void Death()
@@ -115,14 +120,14 @@ public class Zombie : MonoBehaviour
         RoundManager.S.RoundOver(); //Check to see if this is the last zombie in the round to die, therefore triggering the next round
         StartCoroutine(DeathFade()); //start death fade
     }
-    private IEnumerator DeathFade()
+    private IEnumerator DeathFade() //Remove dead zombie model after a few seconds of being killed
     {
         colliders = GetComponentsInChildren<Collider>();
         foreach (Collider collider in colliders)
         {
-            collider.enabled = false;
+            collider.enabled = false; //stop collisions with zombie model
         }
-        gameObject.layer = 7; //stop collisions
+        gameObject.layer = 7; //stop collisions with zombie model
         yield return new WaitForSeconds(5.0f);
         Destroy(this.gameObject);
     }
