@@ -100,7 +100,7 @@ namespace InfimaGames.LowPolyShooterPack
         /// <summary>
         /// Amount of ammunition left in the current magazine
         /// </summary>
-        private int ammunitionCurrent;
+        public int ammunitionCurrent;
 
         /// <summary>
         /// Amount of ammunition left in reserve
@@ -167,7 +167,7 @@ namespace InfimaGames.LowPolyShooterPack
             ammunitionCurrent = magazineBehaviour.GetAmmunitionTotal();
 
             //give player two extra magazines in reserve
-            ammunitionReserve = 2*magazineBehaviour.GetAmmunitionTotal();
+            //ammunitionReserve = 2*magazineBehaviour.GetAmmunitionTotal();
         }
 
         #endregion

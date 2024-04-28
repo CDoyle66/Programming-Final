@@ -4145,7 +4145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806888b85c88e9a4ba7420a6de69103d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 15
+  attackDamage: 10
   audioSource: {fileID: 5273658459441177692}
   damage: {fileID: 8300000, guid: b5d0ba9e5809c174bbab5b57e93c5a17, type: 3}
 --- !u!1 &9200025634904639586

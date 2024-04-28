@@ -17120,6 +17120,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 654501183887359797, guid: 3037ac9b610b0d349ab8ef10bbcee54b,
+        type: 3}
+      propertyPath: zombiePrefab
+      value: 
+      objectReference: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
     - target: {fileID: 878641053458818280, guid: 3037ac9b610b0d349ab8ef10bbcee54b,
         type: 3}
       propertyPath: m_Icon
@@ -17365,6 +17371,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 654501183887359797, guid: 3037ac9b610b0d349ab8ef10bbcee54b,
+        type: 3}
+      propertyPath: zombiePrefab
+      value: 
+      objectReference: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
     - target: {fileID: 878641053458818280, guid: 3037ac9b610b0d349ab8ef10bbcee54b,
         type: 3}
       propertyPath: m_Icon
@@ -31049,6 +31061,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17694672315571547, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: ammunitionReserve
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 311715146319078261, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: ammunitionReserve
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496723213727302341, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2748913124992463393, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31112,6 +31139,11 @@ PrefabInstance:
     - target: {fileID: 2780517249769709989, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
         type: 3}
       propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795493999401270507, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7999892636887377833, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
@@ -32003,6 +32035,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 654501183887359797, guid: 3037ac9b610b0d349ab8ef10bbcee54b,
+        type: 3}
+      propertyPath: zombiePrefab
+      value: 
+      objectReference: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
     - target: {fileID: 878641053458818280, guid: 3037ac9b610b0d349ab8ef10bbcee54b,
         type: 3}
       propertyPath: m_Icon
@@ -37409,6 +37447,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 654501183887359797, guid: 3037ac9b610b0d349ab8ef10bbcee54b,
+        type: 3}
+      propertyPath: zombiePrefab
+      value: 
+      objectReference: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
     - target: {fileID: 878641053458818280, guid: 3037ac9b610b0d349ab8ef10bbcee54b,
         type: 3}
       propertyPath: m_Icon
