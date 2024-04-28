@@ -11,7 +11,7 @@ namespace InfimaGames.LowPolyShooterPack
         /// <summary>
         /// Array of all weapons. These are gotten in the order that they are parented to this object.
         /// </summary>
-        private WeaponBehaviour[] weapons;
+        public WeaponBehaviour[] weapons;
         
         /// <summary>
         /// Currently equipped WeaponBehaviour.

@@ -26,16 +26,17 @@ public class RifleAmmoPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Weapon[] weapons = other.gameObject.GetComponentsInChildren<Weapon>();
-            foreach(Weapon weapon in weapons)
+            WeaponBehaviour[] weapons = other.gameObject.GetComponentInChildren<Inventory>().weapons;
+            foreach(WeaponBehaviour weapon in weapons)
             {
-                if(weapon.IsAutomatic() && isRifleAmmo)
+                Weapon weaponStats = weapon.GetComponent<Weapon>();
+                if(weaponStats.IsAutomatic() && isRifleAmmo)
                 {
-                    weapon.AddReserveAmmunition();
+                    weaponStats.AddReserveAmmunition();
                 }
                 else if (!weapon.IsAutomatic() && !isRifleAmmo)
                 {
-                    weapon.AddReserveAmmunition();
+                    weaponStats.AddReserveAmmunition();
                 }
             }
             StartCoroutine(Respawn());

@@ -178,7 +178,16 @@ namespace InfimaGames.LowPolyShooterPack
             #endregion
             
             //Update Velocity.
-            Velocity = new Vector3(movement.x, 0.0f, movement.z);
+
+            if (grounded)
+            {
+                Velocity = new Vector3(movement.x, 0.0f, movement.z);
+
+            }
+            else
+            {
+                Velocity = new Vector3(movement.x, -3.8f, movement.z); //Apply more realistic gravity if the player isn't grounded
+            }
         }
 
         /// <summary>

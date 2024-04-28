@@ -974,9 +974,8 @@ MonoBehaviour:
   dampTimeLocomotion: 0.1
   dampTimeAiming: 0.3
   characterAnimator: {fileID: 3320314160785962872}
-  health: 0
+  health: 100
   healthUI: {fileID: 0}
-  damage: {fileID: 8300000, guid: b5d0ba9e5809c174bbab5b57e93c5a17, type: 3}
 --- !u!114 &8163229473432397683
 MonoBehaviour:
   m_ObjectHideFlags: 0
